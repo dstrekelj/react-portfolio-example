@@ -1,0 +1,58 @@
+{
+    "private": true,
+    "name": "react-portfolio-example",
+    "scripts": {
+        "lint": "pretty-quick --staged && lint-staged",
+        "build": "webpack --mode production --config ./config/webpack.config.js",
+        "dev": "webpack-dev-server --open --mode development --config ./config/webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dstrekelj/react-portfolio-example.git"
+    },
+    "author": "dstrekelj <domagojstrekelj@gmail.com>",
+    "license": "CC0 1.0 Universal",
+    "bugs": {
+        "url": "https://github.com/dstrekelj/react-portfolio-example/issues"
+    },
+    "homepage": "https://github.com/dstrekelj/react-portfolio-example#readme",
+    "devDependencies": {
+        "@babel/core": "^7.10.3",
+        "@babel/preset-env": "^7.10.3",
+        "@babel/preset-react": "^7.10.1",
+        "@types/react": "^16.9.41",
+        "@types/react-dom": "^16.9.8",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "eslint": "^7.3.1",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.20.2",
+        "html-loader": "^1.1.0",
+        "html-webpack-plugin": "^4.3.0",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.11",
+        "prettier": "^2.0.5",
+        "pretty-quick": "^2.0.1",
+        "webpack": "^4.43.0",
+        "webpack-bundle-analyzer": "^3.8.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-manifest-plugin": "^2.2.0"
+    },
+    "dependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-router-dom": "^5.2.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint"
+        }
+    },
+    "lint-staged": {
+        "./src/*.{js,jsx}": [
+            "eslint --cache --fix"
+        ]
+    }
+}

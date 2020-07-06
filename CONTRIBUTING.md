@@ -45,3 +45,9 @@ See #123, #125, #130
 Changelog changes must adhere to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) standards.
 
 For more information see the [changelog](./CHANGELOG.md).
+
+### JavaScript
+
+JavaScript code style is maintained by EditorConfig, Prettier, and ESLint.
+
+For more information see [.editorconfig](./.editorconfig), [.prettierrc](./.prettierrc), and [.eslintrc](./.eslintrc).
