@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 Changes are tracked as incremental revisions.
 
+## [r3] - 2020-07-06
+
+-   Create static bundle analysis in production, serve bundle analysis in development
+
 ## [r2] - 2020-07-06
 
 -   Add and configure Webpack with code splitting, cache busting, and bundle analysis steps

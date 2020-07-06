@@ -37,7 +37,9 @@ module.exports = (env, argv) => {
                 template: path.resolve(public, "index.html"),
             }),
             new WebpackManifestPlugin(),
-            new BundleAnalyzerPlugin(),
+            new BundleAnalyzerPlugin({
+                analyzerMode: argv.mode === "development" ? "server" : "static",
+            }),
         ],
         devtool: argv.mode === "development" ? "eval" : "hidden-source-map",
         devServer: {
