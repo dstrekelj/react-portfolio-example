@@ -1,0 +1,5 @@
+@use 'assets/styles/settings/global';
+
+@forward '~sass-mq' with (
+    $mq-breakpoints: global.$breakpoints
+);

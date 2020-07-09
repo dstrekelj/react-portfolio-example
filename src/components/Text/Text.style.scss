@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "assets/styles/settings/global";
+@use "assets/styles/settings/color";
+@use "assets/styles/mixins";
+
+.text-family-mono {
+    font-family: global.$font-family-mono;
+}
+
+.text-size-title {
+    @include mixins.responsive-property(font-size, 24px, 32px);
+}
+
+.text-size-lead {
+    @include mixins.responsive-property(font-size, 18px, 24px);
+}
+
+.text-size-small {
+    font-size: 14px;
+}
+
+.text-body {
+    font-size: 16px;
+}
+
+.text-weight-300 {
+    font-weight: 300;
+}
+
+.text-weight-700 {
+    font-weight: 700;
+}
+
+.text-style-normal {
+    font-style: normal;
+}
+
+.text-style-italic {
+    font-style: italic;
+}
+
+.text-color-normal {
+    color: color.$text;
+}
+.text-color-dimmed {
+    color: color.$text-dimmed;
+}
+
+.text-height-150 {
+    line-height: 1.5;
+}

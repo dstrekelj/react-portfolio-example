@@ -1,0 +1,20 @@
+@use "assets/styles/settings/global";
+@use "assets/styles/mixins";
+
+.app-layout {
+}
+
+.app-layout__header {
+    @include mixins.responsive-property(margin-top, 36px, 48px);
+    @include mixins.responsive-property(margin-bottom, 36px, 48px);
+}
+
+.app-layout__main {
+    @include mixins.responsive-property(margin-top, 48px, 64px);
+    @include mixins.responsive-property(margin-bottom, 48px, 64px);
+}
+
+.app-layout__footer {
+    @include mixins.responsive-property(margin-top, 36px, 48px);
+    @include mixins.responsive-property(margin-bottom, 36px, 48px);
+}

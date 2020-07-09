@@ -1,0 +1,9 @@
+@use "assets/styles/settings/global";
+@use "assets/styles/mixins";
+
+.wrapper {
+    display: block;
+    width: calc(100% - #{global.$margin});
+    max-width: global.$wrapper;
+    margin: 0 auto;
+}

@@ -1,0 +1,38 @@
+@use "sass:map";
+
+$breakpoints: () !default;
+
+@function -get-breakpoint($name, $breakpoints: $breakpoints) {
+    @if map-has-key($breakpoints, $name) {
+        @return map-get($breakpoints, $name);
+    } @else {
+        @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+    }
+}
+
+@function -strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+/**
+ * @see https://css-tricks.com/snippets/css/fluid-typography/
+ */
+@mixin fluid-property($property, $min-value, $max-value, $min-vw, $max-vw) {
+    $value-range: -strip-unit($max-value - $min-value);
+    $viewport-range: -strip-unit($max-vw - $min-vw);
+
+    #{$property}: calc(
+        #{$min-value} + #{$value-range} *
+            ((100vw - #{$min-vw}) / #{$viewport-range})
+    );
+}
+
+@mixin responsive-property($property, $min-value, $max-value) {
+    @include fluid-property(
+        $property,
+        $min-value,
+        $max-value,
+        -get-breakpoint(phone, $breakpoints),
+        -get-breakpoint(desktop, $breakpoints)
+    );
+}

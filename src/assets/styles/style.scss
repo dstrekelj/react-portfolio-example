@@ -1,0 +1,22 @@
+@use "./fonts/SourceCodePro/SourceCodePro";
+@use "./settings/color";
+@use "./settings/global";
+@use "./generic";
+
+body {
+    background: color.$background;
+    color: color.$text;
+    font-family: global.$font-family-mono;
+    font-size: global.$rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}

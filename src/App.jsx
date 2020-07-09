@@ -1,17 +1,8 @@
-import React from "react";
-import { Switch, Route, NavLink } from "react-router-dom";
+import "./assets/styles/style.scss";
 
-export const App = () => (
-    <Switch>
-        <Route exact path="/">
-            <h1>Home</h1>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-        </Route>
-        <Route exact path="/contact">
-            <h1>Contact</h1>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-        </Route>
-    </Switch>
-);
+import React from "react";
+import { Home } from "./pages/Home";
+import { AppLayout } from "./components/AppLayout";
+import { Navigation } from "./components/Navigation";
+
+export const App = () => <AppLayout header={<Navigation />} main={<Home />} />;

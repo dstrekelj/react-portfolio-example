@@ -1,0 +1,19 @@
+$unit: 4px;
+$rem: 16px;
+
+$gutter-desktop: $unit * 8;
+$gutter-responsive: $unit * 4;
+
+$margin: $unit * 4;
+
+$wrapper: 384 - $margin * 2;
+
+$font-family-mono: "Source Code Pro", monospace;
+
+$breakpoints: (
+    phone: 600px,
+    phablet: 960px,
+    tablet: 1280px,
+    desktop: 1920px,
+    wrapper: $wrapper + 2 * $margin,
+);

@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 Changes are tracked as incremental revisions.
 
+## [r4] - 2020-07-09
+
+-   Add home page and components
+-   Outline contact page
+-   Add font and file support to Webpack
+-   Set up style assets
+
 ## [r3] - 2020-07-06
 
 -   Create static bundle analysis in production, serve bundle analysis in development

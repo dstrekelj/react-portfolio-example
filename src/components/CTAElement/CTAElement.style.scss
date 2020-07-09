@@ -1,0 +1,23 @@
+@use "assets/styles/settings/global";
+@use "assets/styles/mixins";
+
+.cta-element {
+    text-decoration: none;
+}
+.cta-element__label {
+    text-decoration: underline;
+}
+.cta-element__icon {
+    display: inline-block;
+    margin-right: 0.5em;
+    animation: cta-element-icon-hover 1s ease-in-out infinite alternate;
+}
+
+@keyframes cta-element-icon-hover {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(20%);
+    }
+}

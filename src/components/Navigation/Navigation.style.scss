@@ -1,0 +1,8 @@
+@use "assets/styles/settings/global";
+@use "assets/styles/mixins";
+
+.navigation__link.active {
+    text-decoration: none;
+    font-weight: 400;
+    color: inherit;
+}

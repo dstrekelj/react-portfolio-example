@@ -1,0 +1,8 @@
+@use 'assets/styles/settings/global';
+
+@forward "a11y-hide";
+@forward "font-face";
+@forward "fluid-property" with (
+    $breakpoints: global.$breakpoints
+);
+@forward "mq";
