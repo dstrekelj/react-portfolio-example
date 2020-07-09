@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 Changes are tracked as incremental revisions.
 
+## [r5] - 2020-07-09
+
+-   Add contact page and components
+
 ## [r4] - 2020-07-09
 
 -   Add home page and components

@@ -3,10 +3,26 @@
 
 .cta-element {
     text-decoration: none;
+    border: none;
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &[disabled] {
+        opacity: 0.5;
+
+        .cta-element__icon {
+            animation-play-state: paused;
+        }
+    }
 }
+
 .cta-element__label {
+    display: inline-block;
     text-decoration: underline;
 }
+
 .cta-element__icon {
     display: inline-block;
     margin-right: 0.5em;
@@ -17,6 +33,7 @@
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(20%);
     }

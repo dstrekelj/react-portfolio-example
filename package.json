@@ -18,11 +18,13 @@
     "homepage": "https://github.com/dstrekelj/react-portfolio-example#readme",
     "devDependencies": {
         "@babel/core": "^7.10.3",
+        "@babel/plugin-transform-runtime": "^7.10.4",
         "@babel/preset-env": "^7.10.3",
         "@babel/preset-react": "^7.10.1",
         "@types/prop-types": "^15.7.3",
         "@types/react": "^16.9.41",
         "@types/react-dom": "^16.9.8",
+        "@types/yup": "^0.29.3",
         "babel-loader": "^8.1.0",
         "clean-webpack-plugin": "^3.0.0",
         "css-loader": "^3.6.0",
@@ -51,10 +53,14 @@
     },
     "dependencies": {
         "classnames": "^2.2.6",
+        "final-form": "^4.20.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-router-dom": "^5.2.0"
+        "react-final-form": "^6.5.0",
+        "react-router-dom": "^5.2.0",
+        "react-spring": "^8.0.27",
+        "yup": "^0.29.1"
     },
     "husky": {
         "hooks": {

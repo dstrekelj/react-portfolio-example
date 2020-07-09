@@ -91,7 +91,7 @@ module.exports = (env, argv) => {
             new WebpackManifestPlugin(),
             new BundleAnalyzerPlugin({
                 analyzerMode: argv.mode === "development" ? "server" : "static",
-                openAnalyzer: argv.mode === "development",
+                openAnalyzer: false,
             }),
             new MiniCssExtractPlugin({
                 filename: "[name].css",
@@ -100,6 +100,7 @@ module.exports = (env, argv) => {
         devtool: argv.mode === "development" ? "eval" : "source-map",
         devServer: {
             contentBase: output,
+            historyApiFallback: true,
         },
         optimization: {
             moduleIds: "hashed",

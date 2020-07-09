@@ -7,8 +7,13 @@ export const Navigation = () => (
     <nav className="navigation">
         <ul className="navigation__list">
             <li className="navigation__item">
-                <NavLink className="navigation__link" to="/">
+                <NavLink className="navigation__link" to="/" exact>
                     Home
+                </NavLink>
+            </li>
+            <li className="navigation__item">
+                <NavLink className="navigation__link" to="/contact" exact>
+                    Contact
                 </NavLink>
             </li>
         </ul>

@@ -1,0 +1,15 @@
+@use "assets/styles/settings/global";
+@use "assets/styles/settings/color";
+@use "assets/styles/mixins";
+
+.form-field {
+    margin-top: global.$unit * 8;
+    margin-bottom: global.$unit * 8;
+}
+
+.form-error,
+.form-success {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+}

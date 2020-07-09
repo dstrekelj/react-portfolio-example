@@ -1,8 +1,19 @@
 @use "assets/styles/settings/global";
+@use "assets/styles/settings/color";
 @use "assets/styles/mixins";
 
-.navigation__link.active {
-    text-decoration: none;
-    font-weight: 400;
+.navigation__item {
+    display: inline-block;
+    margin-right: global.$unit * 8;
+    font-weight: 300;
+    color: color.$text;
+}
+
+.navigation__link {
     color: inherit;
+
+    &.active {
+        text-decoration: none;
+        font-weight: 400;
+    }
 }

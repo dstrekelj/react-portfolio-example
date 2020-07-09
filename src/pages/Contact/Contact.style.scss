@@ -1,0 +1,25 @@
+@use "assets/styles/settings/global";
+@use "assets/styles/mixins";
+
+.contact-page__title {
+    @include mixins.responsive-property(margin-top, 48px, 64px);
+    @include mixins.responsive-property(margin-bottom, 27px, 36px);
+}
+
+.contact-page__image {
+    @include mixins.responsive-property(margin-top, 27px, 36px);
+    @include mixins.responsive-property(margin-bottom, 27px, 36px);
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.contact-page__content {
+    @include mixins.responsive-property(margin-top, 27px, 36px);
+    @include mixins.responsive-property(margin-bottom, 48px, 64px);
+
+    & > * {
+        @include mixins.responsive-property(margin-top, 27px, 36px);
+        @include mixins.responsive-property(margin-bottom, 27px, 36px);
+    }
+}
