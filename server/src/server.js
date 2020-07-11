@@ -1,5 +1,5 @@
 const express = require("express");
-const schema = require("./contact.validation");
+const schema = require("./contact-validation");
 const { Serializer, Error } = require("jsonapi-serializer");
 const uuid = require("uuid").v4;
 const cors = require("cors");
