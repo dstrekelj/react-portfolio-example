@@ -1,0 +1,11 @@
+{
+    "name": "react-portfolio-example",
+    "version": "1.0.0",
+    "license": "CC0 1.0 Universal",
+    "scripts": {
+        "client:dev": "npm --prefix client run dev",
+        "client:build": "npm --prefix client run build",
+        "server:dev": "npm --prefix server run dev",
+        "server:build": "npm --prefix server run build"
+    }
+}
