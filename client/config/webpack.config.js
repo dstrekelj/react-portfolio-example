@@ -4,6 +4,7 @@ const WebpackManifestPlugin = require("webpack-manifest-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const DotenvWebpackPlugin = require("dotenv-webpack");
 
 const output = path.resolve(__dirname, "..", "build");
 const input = path.resolve(__dirname, "..", "src", "index.js");
@@ -95,6 +96,9 @@ module.exports = (env, argv) => {
             }),
             new MiniCssExtractPlugin({
                 filename: "[name].css",
+            }),
+            new DotenvWebpackPlugin({
+                path: path.resolve(__dirname, "../.env"),
             }),
         ],
         devtool: argv.mode === "development" ? "eval" : "source-map",

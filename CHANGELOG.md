@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 Changes are tracked as incremental revisions.
 
+## [r6] - 2020-07-11
+
+-   Setup monorepo for client, server apps
+-   Add server app with contact API support
+-   Add support for `.env` files to client app
+-   Connect contact form to contact API
+
 ## [r5] - 2020-07-09
 
 -   Add contact page and components

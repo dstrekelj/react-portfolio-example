@@ -2,7 +2,6 @@ import "./ContactForm.style.scss";
 
 import React from "react";
 import { Form, Field } from "react-final-form";
-//import { FORM_ERROR } from "final-form";
 import { CTAElement } from "../CTAElement";
 import { TextArea } from "../../components/TextArea";
 import { Input } from "../../components/Input";
@@ -10,13 +9,8 @@ import { validateFinalFormValues } from "../../utils/validateFinalFormValues";
 import { validationSchema } from "./ContactForm.validation";
 import { sleep } from "../../utils/sleep";
 import { RequestStatusIndicator } from "../RequestStatusIndicator";
-
-const onSubmit = async (values) => {
-    await sleep(1000);
-
-    // @todo connect to api
-    //return { [FORM_ERROR]: "Something went wrong!" };
-};
+import useContact from "../../hooks/api/useContact";
+import { FORM_ERROR } from "final-form";
 
 const onValidate = validateFinalFormValues(validationSchema);
 
@@ -28,9 +22,30 @@ const getRequestStatus = (pending, success, failure) => {
 };
 
 export const ContactForm = () => {
+    const [onSubmit] = useContact();
+
     return (
         <Form
-            onSubmit={onSubmit}
+            onSubmit={async (values) => {
+                await sleep(1000);
+                const response = await onSubmit(values);
+
+                if (response && !response.errors) return undefined;
+
+                const errors = {
+                    [FORM_ERROR]: "Something went wrong!",
+                };
+
+                if (!response || !response.errors) return errors;
+
+                response.errors.reduce((p, c) => {
+                    p[c.meta.name] = c.meta.message;
+
+                    return p;
+                }, errors);
+
+                return errors;
+            }}
             validate={onValidate}
             render={({
                 submitError,
