@@ -16,14 +16,13 @@ const config = {
     port: process.env.APP_SERVER_PORT || 3000,
 };
 
-app.use(express.json({ type: "application/vnd.api+json" }));
-app.use(cors());
+const router = express.Router();
 
-app.get("/ping", (req, res) => {
+router.get("/ping", (req, res) => {
     res.json({ message: "pong" });
 });
 
-app.post(
+router.post(
     "/API/contact",
     async (req, res, next) => {
         try {
@@ -62,6 +61,12 @@ app.post(
         res.status(200).type("application/vnd.api+json").json(response);
     }
 );
+
+app.use(express.json({ type: "application/vnd.api+json" }));
+app.use(cors());
+
+app.use("/.netlify/functions/server", router);
+app.use("/", (req, res) => res.sendFile(path.join(__dirname, "../index.html")));
 
 module.exports = {
     app,
