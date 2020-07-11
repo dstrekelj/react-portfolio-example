@@ -65,7 +65,7 @@ router.post(
 app.use(express.json({ type: "application/vnd.api+json" }));
 app.use(cors());
 
-app.use("/.netlify/functions/server", router);
+app.use("/.netlify/functions/index", router);
 app.use("/", (req, res) => res.sendFile(path.join(__dirname, "../index.html")));
 
 module.exports = {
