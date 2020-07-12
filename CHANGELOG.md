@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 Changes are tracked as incremental revisions.
 
+## [r7] - 2020-07-12
+
+-   Restructure server app architecture
+-   Add support for local serving of server app
+-   Add support for serverless serving of server app via Netlify Functions
+
 ## [r6] - 2020-07-11
 
 -   Setup monorepo for client, server apps
