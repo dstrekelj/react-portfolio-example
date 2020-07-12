@@ -2,7 +2,7 @@
 
 <div align="center">
     <br/>
-    <a href="https://react-portfolio-example.vercel.app/" target="_blank">
+    <a href="https://react-portfolio-example.vercel.app/" target="__blank">
         <img src="react-portfolio-example.png" alt="React portfolio example project screenshot" width="500" />
         <br/>
         <br/>
