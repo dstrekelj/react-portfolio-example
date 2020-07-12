@@ -1,12 +1,17 @@
 # react-portfolio-example
 
-<div style="margin:3em 0;">
+<div align="center">
+    <br/>
     <a href="https://react-portfolio-example.vercel.app/" target="_blank">
-        <img src="react-portfolio-example.png" alt="React portfolio example project screenshot" style="width:100%;max-width:500px;display:block;margin:1.5em auto"/>
-        <div style="text-align:center;font-weight:bold;margin:1.5em 0">
+        <img src="react-portfolio-example.png" alt="React portfolio example project screenshot" width="500" />
+        <br/>
+        <br/>
+        <b>
             See it in action &mdash; react-portfolio-example.vercel.app
-        </div>
+        </b>
     </a>
+    <br/>
+    <br/>
 </div>
 
 ---
