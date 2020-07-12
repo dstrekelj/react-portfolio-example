@@ -4,8 +4,10 @@
     "description": "",
     "main": "src/index.js",
     "scripts": {
-        "build": "netlify-lambda build src",
-        "dev": "node-dev index.js"
+        "build": "netlify-lambda build src/www/netlify",
+        "dev": "node-dev src/www/local/index.js",
+        "serve": "forever start src/www/local/index.js",
+        "serve:stop": "forever stop src/www/local/index.js"
     },
     "keywords": [],
     "author": "dstrekelj <domagojstrekelj@gmail.com>",
@@ -24,6 +26,7 @@
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
+        "forever": "^3.0.0",
         "jsonapi-serializer": "^3.6.6",
         "multer": "^1.4.2",
         "serverless-http": "^2.5.0",
