@@ -35,7 +35,11 @@ Also performs a bundle analysis and creates a detailed treemap of the app and it
 
 ## .env
 
-### API_URL
+### APP_CLIENT_PORT
+
+Port the webpack-dev-server will listen on. Defaults to 8080.
+
+### APP_CLIENT_API_URL
 
 Required. URL for the API served by the server app. Example: `http://localhost:3000`.
 

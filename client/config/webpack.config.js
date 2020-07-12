@@ -5,17 +5,22 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const DotenvWebpackPlugin = require("dotenv-webpack");
+const dotenv = require("dotenv");
 
-const output = path.resolve(__dirname, "..", "build");
-const input = path.resolve(__dirname, "..", "src", "index.js");
-const public = path.resolve(__dirname, "..", "public");
+dotenv.config({
+    path: path.resolve(__dirname, "../.env"),
+});
+
+const outputPath = path.resolve(__dirname, "..", "build");
+const inputPath = path.resolve(__dirname, "..", "src", "index.js");
+const publicPath = path.resolve(__dirname, "..", "public");
 
 module.exports = (env, argv) => {
     const config = {
-        entry: input,
+        entry: inputPath,
         output: {
             filename: "[name].[contenthash].js",
-            path: output,
+            path: outputPath,
             publicPath: "/",
         },
         module: {
@@ -87,7 +92,7 @@ module.exports = (env, argv) => {
                 cleanStaleWebpackAssets: false,
             }),
             new HtmlWebpackPlugin({
-                template: path.resolve(public, "index.html"),
+                template: path.resolve(publicPath, "index.html"),
             }),
             new WebpackManifestPlugin(),
             new BundleAnalyzerPlugin({
@@ -103,8 +108,9 @@ module.exports = (env, argv) => {
         ],
         devtool: argv.mode === "development" ? "eval" : "source-map",
         devServer: {
-            contentBase: output,
+            contentBase: outputPath,
             historyApiFallback: true,
+            port: process.env.APP_CLIENT_PORT || 8080,
         },
         optimization: {
             moduleIds: "hashed",

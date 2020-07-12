@@ -12,7 +12,14 @@
 1. `git clone git@github.com:dstrekelj/react-portfolio-example.git` (or download the latest [release](https://github.com/dstrekelj/react-portfolio-example/releases))
 2. `cd server`
 3. `npm install`
-4. `npm run dev`
+4. Place `.env` (see `.env.example` and [.env](#.env) section)
+5. `npm run dev`
+
+### More information
+
+The API can be explored through the [Firecamp](https://firecamp.io/) collection which is exported to [react-portfolio-example_firecamp.json](./react-portfolio-example_firecamp.json).
+
+Make sure to check that host and port values in API URLs match your development / production setup.
 
 ## Scripts
 
@@ -41,6 +48,36 @@ The entrypoint in this case is `src/www/local/index.js`.
 ### npm run serve:stop
 
 Stops the application daemon.
+
+## .env
+
+### APP_SERVER_PORT
+
+Port the Express app will listen on. Defaults to 3000.
+
+### APP_SERVER_SMTP_HOST
+
+SMTP server host. Required for mail transport to work.
+
+### APP_SERVER_SMTP_PORT
+
+SMTP server port. If set to 465 automatically enables secure TLS. Required for mail transport to work.
+
+### APP_SERVER_SMTP_USER
+
+STMP account username. Required for mail transport to work.
+
+### APP_SERVER_SMTP_PASS
+
+STMP account password. Required for mail transport to work.
+
+### APP_SERVER_EMAIL_SENDER
+
+Sender email address used when sending contact form submissions.
+
+### APP_SERVER_EMAIL_RECIPIENT
+
+Recipient email address used when sending contact form submissions.
 
 ## Contributing
 

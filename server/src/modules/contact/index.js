@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const input = require("./contact.input");
 const output = require("./contact.output");
+const controller = require("./contact.controller");
 
 const router = Router();
 
@@ -19,10 +20,19 @@ router.post(
         }
     },
     async (req, res) => {
-        return res
-            .status(200)
-            .type("application/vnd.api+json")
-            .json(output.success());
+        try {
+            await controller.sendMail(req.body);
+
+            return res
+                .status(200)
+                .type("application/vnd.api+json")
+                .json(output.success());
+        } catch (error) {
+            return res
+                .status(500)
+                .type("application/vnd.api+json")
+                .json(output.failure(error));
+        }
     }
 );
 

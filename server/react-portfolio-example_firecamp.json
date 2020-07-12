@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "__export_time": 1594578526202,
+    "__export_app": "firecamp_v1.4.2",
+    "__export_version": 1
+  },
+  "project": {
+    "name": "react-portfolio-example"
+  },
+  "environment_snippets": [
+    {
+      "name": "Staging",
+      "is_reserved": false
+    },
+    {
+      "name": "Production",
+      "is_reserved": false
+    },
+    {
+      "name": "Development",
+      "is_reserved": true,
+      "variables": [
+        {
+          "name": "value",
+          "key": "base_url",
+          "value": "http://localhost:8081",
+          "disable": false,
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "type": "api",
+      "name": "API contact",
+      "url": {
+        "host": "localhost:8081",
+        "hostname": "localhost",
+        "href": "http://localhost:8081/API/Contact",
+        "origin": "http://localhost:8081",
+        "pathname": "/API/Contact",
+        "port": "8081",
+        "protocol": "http:",
+        "slashes": true
+      },
+      "method": "POST",
+      "active_body": "Default",
+      "active_auth": "no_auth",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/vnd.api+json",
+          "disable": false
+        }
+      ],
+      "bodies": [
+        {
+          "is_default": false,
+          "name": "Invalid",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "application/json": {
+              "value": "{\n  \"email\": \"domagoj.strekelj@gmail\",\n  \"message\": \"Lorem ipsum dolor sit amet.\"\n}"
+            },
+            "text": {
+              "value": "asdasdsa"
+            }
+          }
+        },
+        {
+          "is_default": false,
+          "name": "Empty",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "text": {
+              "value": "asdasdsa"
+            },
+            "application/json": {
+              "value": "{\n}"
+            }
+          }
+        },
+        {
+          "is_default": false,
+          "name": "No email",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "application/json": {
+              "value": "{\n  \"message\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit.\"\n}"
+            },
+            "text": {
+              "value": "asdasdsa"
+            }
+          }
+        },
+        {
+          "is_default": true,
+          "name": "Default",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "text": {
+              "value": "asdasdsa"
+            },
+            "application/json": {
+              "value": "{\n  \"email\": \"john.doe.example@mailinator.com\",\n  \"message\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit.\"\n}"
+            }
+          }
+        },
+        {
+          "is_default": false,
+          "name": "No message",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "application/json": {
+              "value": "{\n  \"email\": \"domagoj.strekelj@gmail.com\"\n}"
+            },
+            "text": {
+              "value": "asdasdsa"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "api",
+      "name": "API contact (copy)",
+      "url": {
+        "host": "hardcore-wiles-40740b.netlify.app",
+        "hostname": "hardcore-wiles-40740b.netlify.app",
+        "href": "https://hardcore-wiles-40740b.netlify.app/.netlify/functions/index/API/contact",
+        "origin": "https://hardcore-wiles-40740b.netlify.app",
+        "pathname": "/.netlify/functions/index/API/contact",
+        "protocol": "https:",
+        "slashes": true
+      },
+      "method": "POST",
+      "active_body": "Default",
+      "active_auth": "no_auth",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/vnd.api+json",
+          "disable": false
+        }
+      ],
+      "bodies": [
+        {
+          "is_default": true,
+          "name": "Default",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "text": {
+              "value": "asdasdsa"
+            },
+            "application/json": {
+              "value": "{\n  \"email\": \"john.doe.example@mailinator.com\",\n  \"message\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit.\"\n}"
+            }
+          }
+        },
+        {
+          "is_default": false,
+          "name": "Invalid",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "application/json": {
+              "value": "{\n  \"email\": \"domagoj.strekelj@gmail\",\n  \"message\": \"Lorem ipsum dolor sit amet.\"\n}"
+            },
+            "text": {
+              "value": "asdasdsa"
+            }
+          }
+        },
+        {
+          "is_default": false,
+          "name": "Empty",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "text": {
+              "value": "asdasdsa"
+            }
+          }
+        },
+        {
+          "is_default": false,
+          "name": "No message",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "application/json": {
+              "value": "{\n  \"email\": \"domagoj.strekelj@gmail.com\"\n}"
+            },
+            "text": {
+              "value": "asdasdsa"
+            }
+          }
+        },
+        {
+          "is_default": false,
+          "name": "No email",
+          "active_type": "application/json",
+          "body_types": {
+            "multipart/form-data": {
+              "value": [
+                {
+                  "key": "email",
+                  "value": "sadasd",
+                  "disable": false,
+                  "type": "text"
+                }
+              ]
+            },
+            "application/json": {
+              "value": "{\n  \"message\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit.\"\n}"
+            },
+            "text": {
+              "value": "asdasdsa"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
