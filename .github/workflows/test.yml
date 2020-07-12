@@ -1,7 +1,6 @@
 name: Server CI
 
-on:
-    push: tags
+on: [push]
 
 defaults:
     run:
