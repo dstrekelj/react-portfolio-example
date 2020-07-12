@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 Changes are tracked as incremental revisions.
 
+## [r8] - 2020-07-12
+
+-   Add server app tests
+-   Add GitHub Actions CI test job
+
 ## [r7] - 2020-07-12
 
 -   Restructure server app architecture
